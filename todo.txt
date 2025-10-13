@@ -1,0 +1,12 @@
+FEATURES🚀
+    -Auth
+        -Welcome Page / About us 
+        -Login Page
+            -Design
+            -System
+        -Register Page
+            -Design
+            -System
+
+
+    
