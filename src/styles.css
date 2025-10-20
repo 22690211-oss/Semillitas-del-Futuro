@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body,html{
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eff4f2;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  
 }
