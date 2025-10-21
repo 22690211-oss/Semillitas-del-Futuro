@@ -1,18 +1,16 @@
 import { Routes } from '@angular/router';
-import { DocenteHome } from './pages/docente-home/docente-home';
-import { WelcomePage } from './pages/welcome-page/welcome-page';
 import { Actividad } from './pages/actividad/actividad';
+import { AdminPage } from './pages/admin-page/admin-page';
+import { WelcomePage } from './pages/welcome-page/welcome-page';
 export const routes: Routes = [
   {
-    path : "",
-    component : WelcomePage
+    path: '',
+    component: WelcomePage,
   },
   {
-    path : "home/docente",
-    component : DocenteHome
+    path: 'alumno/actividades',
+    component: Actividad,
   },
-  {
-    path : "alumno/actividades",
-    component : Actividad
-  }
+
+  { path: 'admin/home', component: AdminPage },
 ];

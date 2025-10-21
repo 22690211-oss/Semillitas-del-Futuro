@@ -1,0 +1,39 @@
+<main>
+  <app-header></app-header>
+  <div class="layout">
+    <aside-menu></aside-menu>
+    <section class="main-content-section">
+      <header>
+        <h1>Gestion de grupos</h1>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Grado</th>
+            <th>Grupo</th>
+            <th>Docente Asignado</th>
+            <th>Cantidad de Alumnos</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(grupo of dataGrupos; track grupo.grupo_letra){
+          <tr>
+            <td>
+              {{ grupo.grado }}
+            </td>
+            <td>
+              {{ grupo.grupo_letra }}
+            </td>
+            <td>
+              {{ grupo.docente }}
+            </td>
+            <td>
+              {{ grupo.cantidad_alumnos }}
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+  </div>
+</main>

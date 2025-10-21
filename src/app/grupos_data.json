@@ -1,0 +1,26 @@
+[
+  {
+    "grado": "Primero",
+    "grupo_letra": "A",
+    "docente": "Julian Hernandez Hernandez",
+    "cantidad_alumnos": 27
+  },
+  {
+    "grado": "Primero",
+    "grupo_letra": "B",
+    "docente": "Margarita Lopez Gutierrez",
+    "cantidad_alumnos": 20
+  },
+  {
+    "grado": "Segundo",
+    "grupo_letra": "C",
+    "docente": "Ignacio Lopez Hernandez",
+    "cantidad_alumnos":31
+  },
+  {
+    "grado": "Primero",
+    "grupo_letra": "D",
+    "docente": "Martha Garcia Huerta",
+    "cantidad_alumnos": 12
+  }
+]
