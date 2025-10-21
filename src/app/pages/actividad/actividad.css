@@ -1,0 +1,112 @@
+
+    /*width: 100%;
+    display: flex; flex-direction: column;
+    height: 100%;*/
+ 
+
+.actividad-header {
+  text-align: center;
+  background: linear-gradient(135deg, #cda8ed, #ed81bc);
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 2rem auto;
+  max-width: 800px;
+  color: #2c3e50;
+}
+
+/* Título principal */
+.actividad-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2e7d32;
+  letter-spacing: 1px;
+}
+
+/* Subtítulo */
+.actividad-header h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Pequeña animación al aparecer */
+.actividad-header h1,
+.actividad-header h2 {
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .actividad-header h1 {
+    font-size: 1.8rem;
+  }
+  .actividad-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+app-actividad-card {
+  display: flex;  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+app-actividad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen cuadrada */
+app-actividad-card img {
+  width: 10px;
+  object-fit: cover; /* No deforma la imagen */
+  display: flex;
+}
+
+/* Nombre de la actividad */
+app-actividad-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.8rem 0 0.3rem 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Grado */
+app-actividad-card h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  app-actividad-card {
+    width: 45%;
+  }
+}
+@media (max-width: 400px) {
+  app-actividad-card {
+    width: 90%;
+  }
+}
