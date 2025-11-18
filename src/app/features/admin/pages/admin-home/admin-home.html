@@ -1,4 +1,7 @@
-<management-layout
-
->
-</management-layout>
+@if(dataisready){
+  <management-layout
+  [currentUser] = "currentUser"
+  [asideMenuButtons] = "asideMenuButtons"
+  >
+  </management-layout>
+}

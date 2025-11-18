@@ -1,0 +1,20 @@
+<header>
+  <h1>Docentes</h1>
+</header>
+@if(isDataReady){
+  <app-table
+    [data] = "docentes"
+    [headers] = "headers"
+    titleModalOnClickRow = "Docente" 
+  >
+  </app-table>
+}@else{
+  <app-loader></app-loader>
+}
+
+@if(isOpenModalCreateDocente){
+  <modal-layout
+    titulo = "Añadir nuevo docente"
+  >
+  </modal-layout>
+}

@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { ActividadCard } from '../../components/actividad-card/actividad-card';
+import { Component } from '@angular/core';
+import { ActividadCard } from '../../shared/actividad-card/actividad-card';
 
 @Component({
   selector: 'app-actividad',

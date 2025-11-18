@@ -5,5 +5,15 @@
 .section-main{
   display: flex; flex-direction: column;
   height: 100%; width: 100%;
-  background-color: #1B263B;
+  background-color: #F5F7FA;
+  overflow-y: scroll;
+}
+
+.main{
+  padding: 20px;
+}
+.container-style{
+  background-color: #0d1b2a;
+  border-radius: 10px;
+  overflow: auto;
 }

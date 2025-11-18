@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { ModalLayout } from '../../components/modal-layout/modal-layout';
-
+// import { Docente } from '../../api/docente';
+import { User } from '../../models/user.model';
+import { ModalLayout } from '../../shared/modal-layout/modal-layout';
 @Component({
   selector: 'app-table',
   imports: [ModalLayout],
@@ -8,13 +9,18 @@ import { ModalLayout } from '../../components/modal-layout/modal-layout';
   styleUrl: './app-table.css'
 })
 export class AppTable{
-  @Input() headers! : string[]
+  @Input() data! : User[]
   @Input() rows! : string[][]
-  @Input() title! : string
   @Input() bgColor : string = "white"
   @Input() tableBorderColor : string = "gray"
-
-  onClickRow(entity : string[]){
-    console.log(entity)
+  @Input() headers! : string[]
+  @Input() titleModalOnClickRow! : string
+  Object = Object
+  modalEntityIsOpen = false
+  handleModal(){
+    this.modalEntityIsOpen = !this.modalEntityIsOpen
+  }
+  entityOnClick(entity :User){ // funcion que se ejecuta al clickear sobre una fila
+   this.handleModal() 
   }
 }

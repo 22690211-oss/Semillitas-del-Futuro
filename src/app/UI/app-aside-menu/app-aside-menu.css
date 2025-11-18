@@ -8,10 +8,10 @@ aside{
   align-items: center;
   justify-content: space-between;
   transition: width 0.5s;
-  color: white;
+  color: black;
   box-sizing: border-box;
   text-overflow: ellipsis;
-  
+  background-color: #FFFFFF;
 }
 .containers-divisors-sections-aside-menu{
   width: 100%;

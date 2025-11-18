@@ -4,10 +4,16 @@
   >
   </app-aside-menu>
   <section class="section-main">
-    <app-header>
+    <app-header
+      [currentUser] = "currentUser"
+    >
     </app-header>
-    <ng-container *ngComponentOutlet="currentComponent">
-    
-    </ng-container>
+    <div class="main">
+      <div class="container-style">
+        <ng-container *ngComponentOutlet="currentComponent">
+        
+        </ng-container>
+      </div>
+    </div>
   </section>
 </div>

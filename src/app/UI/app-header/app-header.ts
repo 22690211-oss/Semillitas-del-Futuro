@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UserIcon } from '../../components/icons/user-icon/user-icon';
+import { UserIcon } from '../icons/user-icon/user-icon';
 @Component({
   selector: 'app-header',
   imports: [UserIcon],
@@ -7,5 +7,5 @@ import { UserIcon } from '../../components/icons/user-icon/user-icon';
   styleUrl: './app-header.css'
 })
 export class AppHeader {
-  @Input() currentUser : string = "Usuario"
+  @Input() currentUser? : string
 }

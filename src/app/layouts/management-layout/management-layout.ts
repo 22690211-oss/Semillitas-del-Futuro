@@ -10,7 +10,7 @@ import { AppHeader } from '../../UI/app-header/app-header';
 })
 export class ManagementLayout{
   @Input() asideMenuButtons! : AsideMenuButton[]//Este atributo debera contener las secciones del asidemenu
-  @Input() currentUser! : string
+  @Input() currentUser? : string = ""
   currentComponent! : Type<any>
   handleEventEmitCurrentComponent(componentSelected : EventEmitter<any>){
     this.currentComponent = componentSelected
