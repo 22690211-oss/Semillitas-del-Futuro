@@ -4,7 +4,7 @@ header{
   display: flex;
   align-items: center;
   padding: 15px;
-  color: white;
+  color: black;
   justify-content: end;
 }
 .header-title-container{
@@ -21,10 +21,8 @@ header{
 button{
   display: inline-flex; align-items: center;
   gap: 10px;
-  color: white;
   background: none;
-  border: 1px solid gray;
-  border: 5px;
+  border: 2px solid #6f62e41f;
   padding: 5px;
   cursor: pointer;
   transition: background-color 0.5s;
@@ -32,5 +30,5 @@ button{
   padding: 5px 20px 5px 20px;
 }
 button:hover{
-  background-color: #26334a;
+  background-color: #6E62E4;
 }

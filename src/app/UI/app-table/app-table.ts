@@ -8,6 +8,7 @@ import { ModalLayout } from '../../shared/modal-layout/modal-layout';
   templateUrl: './app-table.html',
   styleUrl: './app-table.css'
 })
+
 export class AppTable{
   @Input() data! : User[]
   @Input() rows! : string[][]
@@ -15,6 +16,8 @@ export class AppTable{
   @Input() tableBorderColor : string = "gray"
   @Input() headers! : string[]
   @Input() titleModalOnClickRow! : string
+  @Input() hasSearchBar : boolean = false
+  @Input() searchBarPlaceHolder : string = "Buscar"
   Object = Object
   modalEntityIsOpen = false
   handleModal(){

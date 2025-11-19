@@ -1,4 +1,9 @@
 <section class="main-container">
+  @if(hasSearchBar){
+    <header>
+      <input type="" [placeholder]="searchBarPlaceHolder">
+    </header>
+  }
   <div class="table-container">
     <table>
     <thead>
@@ -7,7 +12,7 @@
           <th>
             {{header}}
           </th>
-        }
+        } 
       </tr>
     </thead>
     <tbody>

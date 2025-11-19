@@ -4,16 +4,18 @@
 }
 .section-main{
   display: flex; flex-direction: column;
-  height: 100%; width: 100%;
+  width: 100%;
   background-color: #F5F7FA;
   overflow-y: scroll;
 }
 
 .main{
   padding: 20px;
+  height: 100%; 
 }
 .container-style{
-  background-color: #0d1b2a;
+  height: 100%;
+  background-color:#6E62E4 ;
   border-radius: 10px;
   overflow: auto;
 }

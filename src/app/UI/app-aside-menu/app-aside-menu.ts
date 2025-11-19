@@ -30,10 +30,11 @@ export class AppAsideMenu implements OnInit{
   logoutBtn(){
     this.auth_service.logout().subscribe({
       next : (response) =>{
+        console.log(response)
         this.router.navigate(['login'])
       },
       error : (response) =>{
-
+        console.log(response)
       }
     })
   }

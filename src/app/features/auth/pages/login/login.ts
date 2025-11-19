@@ -11,6 +11,7 @@ import { AuthService, Credentials } from '../../../../services/auth-service/auth
   styleUrls: ['./login.css']
 })
 export class Login {
+
   login_form = new FormGroup({
     email : new FormControl<string>('',{
       nonNullable : true,
@@ -27,8 +28,43 @@ export class Login {
       ]
     })
   })
-  // Estado de la vista: 'login' o 'registro'
-  public esVistaRegistro = false;
+
+
+  register_form = new FormGroup({
+    nombre : new FormControl<string>('',{
+      nonNullable : true,
+      validators : [
+        Validators.required
+      ]
+    }),
+    email : new FormControl<string>('',{
+      nonNullable : true,
+      validators : [
+        Validators.required,
+        Validators.email
+      ]
+    }),
+    telefono : new FormControl<string>('',{
+      nonNullable : true,
+      validators : [
+        Validators.required,
+        Validators.maxLength(10),
+        Validators.minLength(10)
+      ]
+    }),
+    password : new FormControl<string>('',{
+      nonNullable : true,
+      validators : [
+        Validators.required,
+        Validators.maxLength(10),
+        Validators.minLength(10)
+      ]
+    }),
+    rol : new FormControl<string>('docente',{
+      nonNullable : false
+    })
+  })
+  public esVistaRegistro = true;
   constructor(private router: Router ,private auth_service : AuthService) {}
  
   toggleVista() {
@@ -41,13 +77,39 @@ export class Login {
       this.login();
     }
   }
-  registrarUsuario(){
+  registrarUsuario() : void{
+    const datos = this.register_form.getRawValue()
+    if(!this.register_form.valid){
+      console.log("form register valido : ",this.register_form.valid)
+      console.log(this.register_form.controls)
+      Object.keys(this.register_form.controls).forEach(key =>{
+        const control = this.register_form.get(key)
+        console.log(key,control?.errors)
+      })
+      return
+    }      
+    this.auth_service.register(datos).subscribe({
+      next : (response)=>{
+        console.log(response)
+        localStorage.setItem('token',response.token)
+        if(response.user.rol == "docente"){
+          this.router.navigate(['docente'])
+        }
+        if(response.user.rol == "admin"){
+          this.router.navigate(['admin'])
+        }
+      },
+      error : (response) =>{
+        console.log("error")
+        console.log(response)
+      }
+    })
   }
   login(){
     const credenciales : Credentials = this.login_form.getRawValue()
     this.auth_service.login(credenciales).subscribe({
       next: (response) => {
-        console.log(response)
+        console.log(response) 
         localStorage.setItem('token',response.body.auth.token)
         this.router.navigate(['admin'])
       },

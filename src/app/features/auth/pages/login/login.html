@@ -1,8 +1,8 @@
 <section class="login-container">
   <h2 *ngIf="!esVistaRegistro">Iniciar sesión</h2>
   <h2 *ngIf="esVistaRegistro">Registrar nuevo usuario</h2>
-
-  <form [formGroup] = 'login_form'>
+  @if(!esVistaRegistro){
+    <form [formGroup] = 'login_form'>
     <label>
       Email
       <input type="text" formControlName = "email" required />
@@ -11,26 +11,43 @@
       Contraseña
       <input type="password" formControlName = 'password'  required />
     </label>
-    <!-- <label *ngIf="esVistaRegistro">
+    <button type="button" class="auth-button" (click)="handleAccion()">
+      Entrar
+    </button>
+    </form>
+  }
+  @if(esVistaRegistro){
+   <form [formGroup] = 'register_form '>
+    <label>
+      Nombre completo
+      <input type="text" formControlName = 'nombre'>
+    </label>
+    <label>
+      Email
+      <input type="text" formControlName = "email" required />
+    </label>
+    <label>
+      Telefono
+      <input type="tel" formControlName = 'telefono' required>
+    </label>
+    <label>
+      Contraseña
+      <input type="password" formControlName = 'password'  required />
+    </label>
+    <label>
       Seleccionar Rol
-      <select [(ngModel)]="rolSeleccionado" name="rolSeleccionado" required>
-        <option value="administrador">Administrador</option>
+      <select  formControlName = "rol" required>
+        <option value="admin">Administrador</option>
         <option value="docente">Docente</option>
         <option value="alumno">Alumno</option>
       </select>
-    </label> -->
-
+    </label>
     <button type="button" class="auth-button" (click)="handleAccion()">
-      <!-- {{ esVistaRegistro ? 'Registrar y Generar Usuario' : 'Entrar' }} -->
-      Iniciar sesion
+      Registrar
     </button>
-  </form>
-  <!-- <p class="toggle-link" (click)="toggleVista()">
+   </form>
+  }
+  <p class="toggle-link" (click)="toggleVista()">
     {{ esVistaRegistro ? '¿Ya tienes cuenta? Inicia sesión' : '¿Eres nuevo? Regístrate aquí' }}
-  </p> -->
-  <div class="loading-screen">
-    <div>
-      
-    </div>
-  </div>
+  </p>
 </section>

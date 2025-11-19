@@ -24,7 +24,7 @@ button{
   padding: 3px;margin: 0;
   background: none; border: none;
   color: gray;
-  transition: background-color 0.5s,color 0.5s;
+  transition: background-color 0.2s,color 0.2s;
   min-width: 90%; max-width: 90%;
   border-radius: 5px;
   overflow: hidden;
@@ -32,7 +32,7 @@ button{
   text-overflow: ellipsis;
 }
 button:hover{
-  background-color: rgba(255, 255, 255, 0.164);
+  background-color:#6E62E4;
   color: white;
 }
 header{

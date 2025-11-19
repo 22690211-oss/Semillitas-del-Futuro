@@ -23,10 +23,10 @@ export class AdminHome implements OnInit{
   currentUser? : string = ""
   ngOnInit(): void {
     this.auth_service.me().subscribe({
-      next : async (asasd) =>{
+      next : async (response) =>{
         console.log("method me desde admin")
-        console.log(asasd)
-        this.admin_user = asasd
+        console.log(response)
+        this.admin_user = response
         this.currentUser = this.admin_user?.nombre
         this.dataisready = true
       },
@@ -35,7 +35,6 @@ export class AdminHome implements OnInit{
       }
     })
   }
-  
   asideMenuButtons : AsideMenuButton[]=[
     {
       text : "Dashboard",
