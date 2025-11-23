@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -11,7 +11,6 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class Alumno {
   constructor(private router: Router) {}
-
   logout() {
     localStorage.removeItem('currentUserRole');
     this.router.navigateByUrl('/');

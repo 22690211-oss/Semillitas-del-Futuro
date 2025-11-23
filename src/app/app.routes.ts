@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AdminHome } from './features/admin/pages/admin-home/admin-home';
 import { Login } from './features/auth/pages/login/login';
+import { Alumno } from './pages/alumno/alumno';
 import { Bienvenida } from './pages/bienvenida/bienvenida';
 import { Docente } from './pages/docente/docente';
 
@@ -19,5 +20,9 @@ export const routes: Routes = [{
   {
     path : "admin",
     component : AdminHome
+  },
+  {
+    path : "alumno",
+    component : Alumno
   }
 ]
