@@ -12,6 +12,6 @@ export class DocenteService {
   token = new TokenJwt()
   private apiUrl = environment.API_URL
   getDocentes(){
-    return this.http.get<User[]>(`${this.apiUrl}/docentes`,{headers : this.token.getAuthHeaders()})
+    return this.http.get<User[]>(`${this.apiUrl}/users?rol=docente`,{headers : this.token.getAuthHeaders()})
   }
 }

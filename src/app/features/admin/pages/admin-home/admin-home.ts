@@ -31,6 +31,7 @@ export class AdminHome implements OnInit{
         this.dataisready = true
       },
       error : (error)=>{
+        console.log('error en admin-home al ejecutar metodo me', error)
         this.router.navigate(['/login'])
       }
     })

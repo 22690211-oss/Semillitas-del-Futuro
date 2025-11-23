@@ -64,7 +64,7 @@ export class Login {
       nonNullable : false
     })
   })
-  public esVistaRegistro = true;
+  public esVistaRegistro = false;
   constructor(private router: Router ,private auth_service : AuthService) {}
  
   toggleVista() {

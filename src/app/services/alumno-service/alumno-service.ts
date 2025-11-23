@@ -12,7 +12,7 @@ export class AlumnoService {
   private apiUrl = environment.API_URL
   token = new TokenJwt()
   getAlumnos(){
-    return this.http.get<User[]>(`${this.apiUrl}/alumnos`,{headers : this.token.getAuthHeaders()})
+    return this.http.get<User[]>(`${this.apiUrl}/users?rol=alumno`,{headers : this.token.getAuthHeaders()})
   }
   
 }
