@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment.development';
-import { User } from '../../models/user.model';
+import { User } from '../../models/user/user.model';
 import { TokenJwt } from '../token';
 
 export interface Credentials{

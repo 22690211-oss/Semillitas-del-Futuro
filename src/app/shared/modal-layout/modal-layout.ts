@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output, Type } from '@angular/core';
 })
 export class ModalLayout {
   @Output() cerrado = new EventEmitter<void>()
-  @Input({required : true}) titulo! : string
+  @Input() titulo? : string
   currentComponent : Type<any> | undefined 
   cerrar(){
     this.cerrado.emit()

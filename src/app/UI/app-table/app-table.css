@@ -53,3 +53,15 @@ header input{
   border: 1px solid gray;
   border-radius: 0.3rem;
 }
+
+.options-ul{
+  display: inline-flex;
+  list-style: none; 
+  padding: 0;
+}
+
+.options-ul li button{
+  background:none;
+  border: none;
+  cursor: pointer;
+}

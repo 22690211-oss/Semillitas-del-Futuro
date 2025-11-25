@@ -3,6 +3,7 @@ import { AdminHome } from './features/admin/pages/admin-home/admin-home';
 import { Login } from './features/auth/pages/login/login';
 import { Alumno } from './pages/alumno/alumno';
 import { Bienvenida } from './pages/bienvenida/bienvenida';
+import { AvanceAgua } from './pages/docente/avance_agua/avance_agua';
 import { Docente } from './pages/docente/docente';
 
 export const routes: Routes = [{
@@ -25,4 +26,5 @@ export const routes: Routes = [{
     path : "alumno",
     component : Alumno
   }
+  ,{path : "agua",component: AvanceAgua}
 ]

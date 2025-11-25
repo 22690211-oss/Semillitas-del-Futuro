@@ -12,13 +12,13 @@
           <th>
             {{header}}
           </th>
-        } 
+        }
       </tr>
     </thead>
     <tbody>
       <!-- entity puede ser Docente | Alumno -->
       @for(entity of data; track entity){
-        <tr (click) = "entityOnClick(entity)">
+        <tr (click) = "handleRowClickedEvent(entity)">
           @for(value of Object.values(entity); track value){
             <td>{{value}}</td>
           }
@@ -28,11 +28,4 @@
     </table>
   </div>
 </section>
-
-@if(modalEntityIsOpen){
-  <modal-layout
-  [titulo] = "titleModalOnClickRow"
-  (cerrado) = "handleModal()">
-      
-  </modal-layout>
-}
+  

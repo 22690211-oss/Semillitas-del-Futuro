@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ManagementLayout } from '../../../../layouts/management-layout/management-layout';
-import { User } from '../../../../models/user.model';
+import { User } from '../../../../models/user/user.model';
 import { AuthService } from '../../../../services/auth-service/auth-service';
 import { AsideMenuButton } from '../../../../UI/app-aside-menu/app-aside-menu';
 import { BriefcaseIcon } from '../../../../UI/icons/briefcase-icon/briefcase-icon';
@@ -37,11 +37,6 @@ export class AdminHome implements OnInit{
     })
   }
   asideMenuButtons : AsideMenuButton[]=[
-    {
-      text : "Dashboard",
-      icon : UserIcon,
-      componentRelated : ManageDocentes
-    },
     {
       text : "Docentes",
       icon : BriefcaseIcon,

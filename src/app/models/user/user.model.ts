@@ -7,7 +7,9 @@ export class User {
   telefono? : string 
   password? : string
   rol? : string | null
+  img_url? : string
 }
+
 export const HeadersUsers : string[] = [
   "ID",
   'Nombre',

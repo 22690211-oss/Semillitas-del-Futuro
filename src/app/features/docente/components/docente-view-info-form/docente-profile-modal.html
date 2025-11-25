@@ -1,0 +1,99 @@
+@if(isInfoDocenteReady){
+  <article>
+    <header>
+      <div class="img-container">
+        <img [src] = "docente.img_url" alt="pfp" class="pfp_img">
+      </div>
+      <h3>{{docente.nombre}}</h3>
+      <div class="fast-info">
+        <div style="display: inline-flex;gap: 10px;">
+          <mail-icon></mail-icon>      
+          <h4>{{docente.email}}</h4>
+        </div>
+        <div style="border: 1px solid rgba(128, 128, 128, 0.401);"></div>
+        <div style="display: inline-flex; gap: 10px;">
+          <user-icon></user-icon>
+          <h4>Docente</h4>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><button #btnInformacion (click) = "changeContent('informacion')">Informacion</button></li>
+        <li><button (click) = "changeContent('grupos')">Grupos</button></li>
+        <li><button (click) = "changeContent('actividades')">Actividades</button></li>
+      </ul>
+    </nav>
+    <section class="content-container">
+      @switch(content){
+        @case ('informacion'){
+          <form [formGroup] = "form">
+            <header>
+              @if(isEditMode){
+                <h1>Editando usuario</h1>
+              }
+            </header>
+            <section class="docente-info">
+              <label>
+                Nombre :
+                <input type="text" formControlName = "nombre">
+              </label>
+              <label>
+                Email :
+                <input type="email" formControlName = "email">
+              </label>
+              <label>
+                Telefono :
+                <input type="tel" formControlName = "telefono">
+              </label>
+              <div class="timestamp-info">
+                <label>
+                  Creado en :
+                  <input type="text" formControlName = "created_at">
+                </label>
+                <label>
+                  Ultima actualizacion :
+                  <input type="text" formControlName = "updated_at">
+                </label>
+              </div>
+              <div style="width: 100%; display: inline-flex; justify-content: right; gap: 20px;">
+                @if(!isEditMode){
+                  <button id="eliminar-btn">Eliminar docente</button>                  
+                  <button id="editar-btn" (click) = "handleEditMode()">Editar docente</button>
+                }@else{
+                  <button id="actualizar-btn">Actualizar datos</button>
+                  <button id="cancelar-btn" (click) = "handleEditMode()">Cancelar</button>
+                }
+              </div>
+            </section>
+          </form> 
+        }
+        @case ('grupos'){
+          @if(isInfoGruposDocenteReady){
+            <ul>
+              <li>
+                
+              </li>
+            </ul>
+          }@else{
+            <app-loader></app-loader>
+          }
+        }
+        @case ('activiadades'){
+          @if(isInfoActividadesDocenteReady){
+            <ul>
+              <li></li>
+            </ul>
+          }@else{
+            <app-loader></app-loader>
+          }
+        }
+      }
+    </section>
+  </article>
+  
+  
+}@else{
+  <h1>Cargando</h1>
+  <app-loader></app-loader>
+}

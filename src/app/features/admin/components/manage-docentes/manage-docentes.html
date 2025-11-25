@@ -8,15 +8,22 @@
     titleModalOnClickRow = "Docente" 
     [hasSearchBar] = "true"
     searchBarPlaceHolder = "Buscar por ID"
+    (rowClicked) = "handleDocenteClick($event)"
+    [opciones] = "true"
     >
   </app-table>
 }@else{
   <app-loader></app-loader>
 }
 
-@if(isOpenModalCreateDocente){
+@if(isOpenModalViewDocenteInfo){
   <modal-layout
-    titulo = "Añadir nuevo docente"
+    (cerrado) = "closeModalDocente()"
   >
+    <docente-profile-modal
+      [docenteId] = "currentDocente?.id"
+    >
+      
+    </docente-profile-modal>
   </modal-layout>
 }

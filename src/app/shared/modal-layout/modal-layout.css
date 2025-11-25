@@ -30,5 +30,7 @@
   animation: appear_from_bottom 0.5s;
 }
 .modal-content-header{
+  padding: 10px;
   margin-bottom: 40px;
+  width: 100%;
 }

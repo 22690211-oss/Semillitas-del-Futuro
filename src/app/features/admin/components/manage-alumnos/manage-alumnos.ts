@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeadersUsers, User } from '../../../../models/user.model';
+import { HeadersUsers, User } from '../../../../models/user/user.model';
 import { AlumnoService } from '../../../../services/alumno-service/alumno-service';
 import { AppTable } from '../../../../UI/app-table/app-table';
 import { Loader } from '../../../../UI/loader/loader';

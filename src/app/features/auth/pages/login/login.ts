@@ -28,8 +28,6 @@ export class Login {
       ]
     })
   })
-
-
   register_form = new FormGroup({
     nombre : new FormControl<string>('',{
       nonNullable : true,
@@ -97,6 +95,9 @@ export class Login {
         }
         if(response.user.rol == "admin"){
           this.router.navigate(['admin'])
+        }
+        if(response.user.rol== "alumno"){
+          this.router.navigate(['alumno'])
         }
       },
       error : (response) =>{
