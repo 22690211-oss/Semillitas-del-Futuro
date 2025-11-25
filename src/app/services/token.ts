@@ -11,7 +11,9 @@ export class TokenJwt{
     const token = this.getToken()
     return new HttpHeaders({
       'Authorization' : `Bearer ${token}`,
-      'Content-Type' : 'application/json'
+      'Content-Type' : 'application/json',
+      "Accept" : 'application/json'
+
       
     })
   }

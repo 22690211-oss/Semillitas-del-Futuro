@@ -5,6 +5,7 @@ import { Login } from './features/auth/pages/login/login';
 import { Bienvenida } from './pages/bienvenida/bienvenida';
 import { AvanceAgua } from './pages/docente/avance_agua/avance_agua';
 import { Docente } from './pages/docente/docente';
+import { DocenteHome } from './features/docente/pages/docente-home/docente-home';
 
 export const routes: Routes = [{
     path : "",
@@ -16,7 +17,7 @@ export const routes: Routes = [{
   },
   {
     path : "docente",
-    component : Docente
+    component : DocenteHome
   },
   {
     path : "admin",
