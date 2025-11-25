@@ -17,8 +17,6 @@ export class AppTable{
   @Input() tableBorderColor : string = "gray"
   @Input() headers! : string[]
   @Input() titleModalOnClickRow! : string
-  @Input() hasSearchBar : boolean = false
-  @Input() searchBarPlaceHolder : string = "Buscar"
   @Output() rowClicked = new EventEmitter<any>() 
   @Input() opciones : boolean = false
   Object = Object

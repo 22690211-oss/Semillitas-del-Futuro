@@ -112,7 +112,15 @@ export class Login {
       next: (response) => {
         console.log(response) 
         localStorage.setItem('token',response.body.auth.token)
-        this.router.navigate(['admin'])
+        if(response.user.rol == "docente"){
+          this.router.navigate(['docente'])
+        }
+        if(response.user.rol == "admin"){
+          this.router.navigate(['admin'])
+        }
+        if(response.user.rol== "alumno"){
+          this.router.navigate(['alumno'])
+        }
       },
       error(response){
         console.log(response)

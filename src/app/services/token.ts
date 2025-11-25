@@ -12,6 +12,7 @@ export class TokenJwt{
     return new HttpHeaders({
       'Authorization' : `Bearer ${token}`,
       'Content-Type' : 'application/json'
+      
     })
   }
 }
