@@ -1,0 +1,16 @@
+<div class="actividades-container">
+  <h2 class="titulo-seccion">Mis Actividades</h2>
+  <div class="grid-actividades">
+
+@if(!isInformacionlista){
+    <app-loader>
+        
+    </app-loader> 
+}
+@else{
+    @for(actividad of actividades; track actividad.id){
+        <app-actividad-card  [titulo]="actividad.titulo" [descripcion]="actividad.descripcion"></app-actividad-card>
+
+}}
+  </div>
+</div>
