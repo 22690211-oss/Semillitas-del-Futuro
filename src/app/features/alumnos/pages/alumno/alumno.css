@@ -27,7 +27,7 @@
 /* * Tarjeta de Bienvenida (La caja principal)
  */
 .welcome-card {
-  max-width: 900px;
+  max-width: 900px; 
   width: 100%;
   padding: 2.5rem 2rem;
   background-color: var(--soft-yellow); 
