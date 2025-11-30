@@ -1,9 +1,4 @@
 <div class="portada">
-    <!-- Contenedor para el logo (usa una imagen de la carpeta /imagenes) -->
-     <div class="logo-container">
-        <img src="assets/images/logo1.png" alt="Logo" class="logo-img">
-    </div>
-
     <div class="login-button-container">
         <a routerLink="/login" class="login-btn">
             Login
@@ -11,10 +6,23 @@
         </a>
     </div>
 
-    <div class="simulated-text-overlay">
-        <p class="text-cuida left">Cuida el agua</p>
-        <p class="text-cuida center-left">Que es el medio ambiente</p>
-        <p class="text-cuida center-right">Cuida la luz</p>
-        <p class="text-cuida right">Cuida los bosques</p>
+    <div class="contenido-principal">
+        <h1 class="titulo-principal">Semillitas del Futuro</h1>
+        
+        <div class="logo-container">
+            <img src="assets/images/logo1.png" alt="Logo Semillitas del Futuro" class="logo-img">
+        </div>
+
+        <div class="temas-container">
+            <div class="tema-card" *ngFor="let tema of temas" (click)="abrirVideo(tema.videoUrl)">
+                <div class="video-thumbnail">
+                    <img [src]="tema.thumbnail" [alt]="tema.titulo">
+                    <div class="play-overlay">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </div>
+                <h3 class="tema-titulo">{{ tema.titulo }}</h3>
+            </div>
+        </div>
     </div>
 </div>
